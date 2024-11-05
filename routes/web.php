@@ -20,4 +20,8 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('pegawai', PegawaiController::class);
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 require __DIR__.'/auth.php';

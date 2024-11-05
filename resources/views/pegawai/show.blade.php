@@ -18,7 +18,7 @@
                     <ul>
                         @foreach(['sk_cpns', 'sk_pns', 'kk', 'akte', 'ktp', 'ijazah_sd', 'ijazah_smp', 'ijazah_sma', 'ijazah_kuliah'] as $dokumen)
                             @if($pegawai->$dokumen)
-                                <li>{{ ucfirst(str_replace('_', ' ', $dokumen)) }}: <a href="{{ asset('storage/pegawai_files' . $pegawai->$dokumen) }}" target="_blank">{{ __('Lihat') }}</a></li>
+                                <li>{{ ucfirst(str_replace('_', ' ', $dokumen)) }}: <a href="{{ asset('storage/' . $pegawai->$dokumen) }}" target="_blank">{{ __('Lihat') }}</a></li>
                             @endif
                         @endforeach
                     </ul>

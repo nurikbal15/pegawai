@@ -79,7 +79,6 @@ class PegawaiController extends Controller
         // Handle file uploads
         foreach (['sk_cpns', 'sk_pns', 'kk', 'akte', 'ktp', 'ijazah_sd', 'ijazah_smp', 'ijazah_sma', 'ijazah_kuliah'] as $file) {
             if ($request->hasFile($file)) {
-                // Simpan file di disk 'public'
                 $data[$file] = $request->file($file)->store('pegawai_files', 'public');
             }
         }
